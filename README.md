@@ -31,3 +31,14 @@ You can run this program using Gradle. Use the following command while in the pr
 ```
 ./gradlew run --args 'inputfile/square.txt'
 ```
+
+## Run tests
+To run all unit tests in the package you can use the following Gradle command in the project directory:
+```
+./gradlew clean test
+```
+
+If you would like to see all logging for the unit tests you can use this command:
+```
+./gradlew clean test -i
+```

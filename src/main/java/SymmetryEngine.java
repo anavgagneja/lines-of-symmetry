@@ -52,7 +52,7 @@ public class SymmetryEngine {
     /**
      * Test if each given point has a valid reflection in the set of provided points when reflected
      * over the candidate line.
-
+     *
      * @return true if line is symmetrical for each given point.
      */
     private boolean testLineForSymmetry(Line candidateLine, Set<Point> points) {
