@@ -13,7 +13,7 @@ If running the program, you can provide input by creating a text file that conta
 
 This would look for lines of symmetry among the coordinates (0, 0), (1,0), and (-10, 3.5).
 
-There is a few sample input files in the /test-input folder.
+There are a few sample input files in the /test-input folder.
 
 ## Output
 The output will be a list of linear equations in the format ax + by + c = 0, with each line showing both the original version of the equation that was computed from the points, and an equal but normalized equation for the same line.
