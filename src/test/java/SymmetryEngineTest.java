@@ -1,12 +1,13 @@
 import com.google.common.collect.ImmutableSet;
 import model.Line;
-import model.LineSet;
 import model.Point;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SymmetryEngineTest {
 
@@ -25,7 +26,7 @@ public class SymmetryEngineTest {
         final Point point4 = new Point(10, 10);
         final Set<Point> inputs = ImmutableSet.of(point1, point2, point3, point4);
 
-        final LineSet<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
+        final Set<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
 
         assertEquals(4, solution.size());
         assertTrue(solution.contains(new Line(10, 10, -100)));
@@ -39,7 +40,7 @@ public class SymmetryEngineTest {
         final Point point1 = new Point(0, 0);
         final Set<Point> inputs = ImmutableSet.of(point1);
 
-        final LineSet<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
+        final Set<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
 
         assertTrue(solution.isEmpty());
     }
@@ -51,7 +52,7 @@ public class SymmetryEngineTest {
 
         final Set<Point> inputs = ImmutableSet.of(point1, point2);
 
-        final LineSet<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
+        final Set<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
 
         assertEquals(2, solution.size());
         assertTrue(solution.contains(new Line(0, 1, 0)));
@@ -65,7 +66,7 @@ public class SymmetryEngineTest {
 
         final Set<Point> inputs = ImmutableSet.of(point1, point2);
 
-        final LineSet<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
+        final Set<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
 
         assertEquals(2, solution.size());
         assertTrue(solution.contains(new Line(1, 0, 0)));
@@ -79,7 +80,7 @@ public class SymmetryEngineTest {
 
         final Set<Point> inputs = ImmutableSet.of(point1, point2);
 
-        final LineSet<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
+        final Set<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
 
         assertEquals(2, solution.size());
         assertTrue(solution.contains(new Line(10, 10, -100)));
@@ -97,7 +98,7 @@ public class SymmetryEngineTest {
 
         final Set<Point> inputs = ImmutableSet.of(point1, point2, point3, point4, point5, point6);
 
-        final LineSet<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
+        final Set<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
         assertTrue(solution.isEmpty());
     }
 
@@ -117,7 +118,7 @@ public class SymmetryEngineTest {
         final Set<Point> inputs = ImmutableSet.of(point1, point2, point3, point4, point5,
                 point6, point7, point8, point9, point10);
 
-        final LineSet<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
+        final Set<Line> solution = symmetryEngine.generateLinesOfSymmetry(inputs);
 
         assertEquals(4, solution.size());
         assertTrue(solution.contains(new Line(0, -1, 0)));

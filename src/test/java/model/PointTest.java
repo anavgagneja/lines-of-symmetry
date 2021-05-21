@@ -25,8 +25,8 @@ public class PointTest {
 
         final Point reflectedPoint = point.reflect(mirrorLine);
 
-        assertEquals(.538, roundToThousandth(reflectedPoint.getX()));
-        assertEquals(1.308, roundToThousandth(reflectedPoint.getY()));
+        assertEquals(1.308, roundToThousandth(reflectedPoint.getX()));
+        assertEquals(.538, roundToThousandth(reflectedPoint.getY()));
     }
 
     @Test
@@ -69,7 +69,7 @@ public class PointTest {
     void testMidpointHappyPath() {
         final Point point1 = new Point(0, 0);
         final Point point2 = new Point(10, 10);
-        final Point midpoint = Point.getMidpoint(point1, point2);
+        final Point midpoint = Point.Companion.getMidpoint(point1, point2);
 
         assertEquals(new Point(5, 5), midpoint);
     }
@@ -78,7 +78,7 @@ public class PointTest {
     void testMidpointSamePoints() {
         final Point point1 = new Point(10, 10);
         final Point point2 = new Point(10, 10);
-        final Point midpoint = Point.getMidpoint(point1, point2);
+        final Point midpoint = Point.Companion.getMidpoint(point1, point2);
 
         assertEquals(new Point(10, 10), midpoint);
     }
