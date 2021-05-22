@@ -1,11 +1,11 @@
-package com.anav.kotlin.model
+package com.anav.kotlin.symmetry
 
-import com.anav.kotlin.model.Point.Companion.getMidpoint
-import com.anav.kotlin.model.Line
-import com.anav.kotlin.model.Point
-import org.junit.jupiter.api.Assertions.*
+import com.anav.kotlin.symmetry.Point.Companion.getMidpoint
 import org.junit.jupiter.api.Test
 import kotlin.math.roundToLong
+import kotlin.test.assertEquals
+import kotlin.test.assertFalse
+import kotlin.test.assertTrue
 
 class PointTest {
     @Test

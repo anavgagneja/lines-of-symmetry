@@ -1,7 +1,8 @@
-package com.anav.kotlin.model
+package com.anav.kotlin.symmetry
 
-import com.anav.kotlin.model.Point.Companion.getMidpoint
-import java.util.*
+import com.anav.kotlin.symmetry.Point.Companion.getMidpoint
+import kotlinx.serialization.Serializable
+import java.util.Objects.hash
 
 /**
  * Linear line represented by co-efficients a, b, c in format: ax + by + c = 0.
@@ -13,8 +14,6 @@ class Line(val a: Double, val b: Double, val c: Double) {
 
     val slope: Double
     val yIntercept: Double
-    val isHorizontal = a == 0.0
-    val isVertical = b == 0.0
 
     init {
         require(!(a == 0.0 && b == 0.0)) { "Invalid equation. Both a and b cannot be 0." }
@@ -38,7 +37,7 @@ class Line(val a: Double, val b: Double, val c: Double) {
     }
 
     override fun hashCode(): Int {
-        if (hashCode == null) hashCode = Objects.hash(slope, yIntercept)
+        if (hashCode == null) hashCode = hash(slope, yIntercept)
         return hashCode as Int
     }
 

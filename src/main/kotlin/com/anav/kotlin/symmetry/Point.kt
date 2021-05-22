@@ -1,5 +1,8 @@
-package com.anav.kotlin.model
+package com.anav.kotlin.symmetry
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Point(val x: Double, val y: Double) {
 
     /**
@@ -27,8 +30,7 @@ data class Point(val x: Double, val y: Double) {
      * Check if point sits on given [Line].
      */
     fun satisfiesLine(line: Line): Boolean {
-        val sum = line.a * x + line.b * y + line.c
-        return sum == 0.0
+        return line.a * x + line.b * y + line.c == 0.0
     }
 
     companion object {

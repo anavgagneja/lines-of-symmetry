@@ -1,13 +1,10 @@
-package com.anav.kotlin.model
+package com.anav.kotlin.symmetry
 
-import com.anav.kotlin.model.Line
-import com.anav.kotlin.model.Point
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.api.Assertions.assertFalse
-import org.junit.jupiter.api.Assertions.assertNotEquals
+import com.anav.kotlin.symmetry.Line
+import com.anav.kotlin.symmetry.Point
 import org.junit.jupiter.api.Test
-import java.util.HashSet
+import kotlin.test.assertEquals
+import kotlin.test.assertNotEquals
 
 class LineTest {
     @Test
@@ -108,24 +105,9 @@ class LineTest {
         val line1 = Line(1.0, 2.0, 3.0)
         val line2 = Line(2.0, 4.0, 6.0)
 
-        val set: MutableSet<Line> = HashSet()
-        set.add(line1)
-        set.add(line2)
+        val set = setOf(line1, line2)
 
         assertEquals(1, set.size)
     }
 
-    @Test
-    fun testIsVerticalTrue() {
-        val line = Line(1.0, 0.0, 0.0)
-        assertFalse(line.isHorizontal)
-        assertTrue(line.isVertical)
-    }
-
-    @Test
-    fun testIsHorizontalTrue() {
-        val line = Line(0.0, 1.0, 0.0)
-        assertFalse(line.isVertical)
-        assertTrue(line.isHorizontal)
-    }
 }
