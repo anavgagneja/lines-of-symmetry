@@ -1,9 +1,11 @@
-package com.anav.symmetry.kotlin;
+package com.anav.kotlin;
 
-import com.anav.symmetry.kotlin.SymmetryEngine;
+import com.anav.kotlin.model.Line;
+import com.anav.kotlin.model.Point;
+import com.anav.kotlin.SymmetryEngine;
 import com.google.common.collect.ImmutableSet;
-import com.anav.symmetry.kotlin.model.Line;
-import com.anav.symmetry.kotlin.model.Point;
+import com.anav.kotlin.model.Line;
+import com.anav.kotlin.model.Point;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

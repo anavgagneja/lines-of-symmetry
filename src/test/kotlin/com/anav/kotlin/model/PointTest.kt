@@ -1,8 +1,8 @@
-package com.anav.symmetry.kotlin.model
+package com.anav.kotlin.model
 
-import com.anav.symmetry.kotlin.model.Point.Companion.getMidpoint
-import com.anav.symmetry.kotlin.model.Line
-import com.anav.symmetry.kotlin.model.Point
+import com.anav.kotlin.model.Point.Companion.getMidpoint
+import com.anav.kotlin.model.Line
+import com.anav.kotlin.model.Point
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import kotlin.math.roundToLong

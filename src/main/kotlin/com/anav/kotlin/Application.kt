@@ -1,6 +1,6 @@
-package com.anav.symmetry.kotlin
+package com.anav.kotlin
 
-import com.anav.symmetry.kotlin.model.Point
+import com.anav.kotlin.model.Point
 import org.tinylog.kotlin.Logger
 import java.io.File
 

@@ -1,7 +1,7 @@
-package com.anav.symmetry.kotlin.model
+package com.anav.kotlin.model
 
-import com.anav.symmetry.kotlin.model.Line
-import com.anav.symmetry.kotlin.model.Point
+import com.anav.kotlin.model.Line
+import com.anav.kotlin.model.Point
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Assertions.assertFalse

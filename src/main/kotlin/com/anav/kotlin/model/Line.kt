@@ -1,6 +1,6 @@
-package com.anav.symmetry.kotlin.model
+package com.anav.kotlin.model
 
-import com.anav.symmetry.kotlin.model.Point.Companion.getMidpoint
+import com.anav.kotlin.model.Point.Companion.getMidpoint
 import java.util.*
 
 /**
