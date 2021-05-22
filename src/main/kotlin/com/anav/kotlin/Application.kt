@@ -1,6 +1,6 @@
 package com.anav.kotlin
 
-import com.anav.kotlin.routes.registerSymmetryRoutes
+import com.anav.kotlin.server.routes.registerSymmetryRoutes
 import io.ktor.application.Application
 import io.ktor.application.install
 import io.ktor.features.CallLogging

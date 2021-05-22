@@ -1,7 +1,7 @@
-package com.anav.kotlin.routes
+package com.anav.kotlin.server.routes
 
-import com.anav.kotlin.model.LineModel
-import com.anav.kotlin.model.PointModel
+import com.anav.kotlin.server.model.LineModel
+import com.anav.kotlin.server.model.PointModel
 import com.anav.kotlin.symmetry.SymmetryEngine
 import io.ktor.application.Application
 import io.ktor.application.call

@@ -1,4 +1,4 @@
-package com.anav.kotlin.model
+package com.anav.kotlin.server.model
 
 import com.anav.kotlin.symmetry.Line
 import com.anav.kotlin.symmetry.Point
