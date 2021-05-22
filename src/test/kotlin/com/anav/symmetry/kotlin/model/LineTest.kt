@@ -1,5 +1,7 @@
-package model
+package com.anav.symmetry.kotlin.model
 
+import com.anav.symmetry.kotlin.model.Line
+import com.anav.symmetry.kotlin.model.Point
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Assertions.assertFalse
@@ -12,7 +14,9 @@ class LineTest {
     fun testGetCollinearLinePositiveSlope() {
         val point1 = Point(0.0, 0.0)
         val point2 = Point(10.0, 10.0)
+
         val collinearLine = Line.getCollinearLine(point1, point2)
+
         assertEquals(Line(-10.0, 10.0, 0.0), collinearLine)
     }
 
@@ -20,7 +24,9 @@ class LineTest {
     fun testGetCollinearLinePositiveSlope2() {
         val point1 = Point(2.0, 1.0)
         val point2 = Point(4.0, 5.0)
+
         val collinearLine = Line.getCollinearLine(point1, point2)
+
         assertEquals(Line(-4.0, 2.0, 6.0), collinearLine)
     }
 
@@ -28,7 +34,9 @@ class LineTest {
     fun testGetCollinearLineVerticalLine() {
         val point1 = Point(-1.0, 0.0)
         val point2 = Point(-1.0, 10.0)
+
         val collinearLine = Line.getCollinearLine(point1, point2)
+
         assertEquals(Line(-1.0, 0.0, -1.0), collinearLine)
     }
 
@@ -36,7 +44,9 @@ class LineTest {
     fun testGetCollinearLineHorizontalLine() {
         val point1 = Point(10.0, 0.0)
         val point2 = Point(1.0, 0.0)
+
         val collinearLine = Line.getCollinearLine(point1, point2)
+
         assertEquals(Line(0.0, -1.0, 0.0), collinearLine)
     }
 
@@ -44,7 +54,9 @@ class LineTest {
     fun testGetOrthogonalLine() {
         val point1 = Point(0.0, 0.0)
         val point2 = Point(10.0, 10.0)
+
         val orthogonalLine = Line.getOrthogonalLine(point1, point2)
+
         assertEquals(Line(1.0, 1.0, -10.0), orthogonalLine)
     }
 
@@ -52,7 +64,9 @@ class LineTest {
     fun testGetOrthogonalLineHorizontal() {
         val point1 = Point(10.0, 0.0)
         val point2 = Point(0.0, 0.0)
+
         val orthogonalLine = Line.getOrthogonalLine(point1, point2)
+
         assertEquals(Line(-1.0, 0.0, 5.0), orthogonalLine)
     }
 
@@ -60,13 +74,16 @@ class LineTest {
     fun testGetOrthogonalLineVertical() {
         val point1 = Point(0.0, 10.0)
         val point2 = Point(0.0, 0.0)
+
         val orthogonalLine = Line.getOrthogonalLine(point1, point2)
+
         assertEquals(Line(0.0, -1.0, 5.0), orthogonalLine)
     }
 
     @Test
     fun testEqualsSameObject() {
         val line = Line(1.0, 2.0, 3.0)
+
         assertEquals(line, line)
     }
 
@@ -74,6 +91,7 @@ class LineTest {
     fun testEqualsDoubled() {
         val line1 = Line(1.0, 2.0, 3.0)
         val line2 = Line(2.0, 4.0, 6.0)
+
         assertEquals(line1, line2)
     }
 
@@ -81,6 +99,7 @@ class LineTest {
     fun testNotEquals() {
         val line1 = Line(1.0, 2.0, 3.0)
         val line2 = Line(3.0, 4.0, 6.0)
+
         assertNotEquals(line1, line2)
     }
 
@@ -88,9 +107,11 @@ class LineTest {
     fun testHashCodeEqualDoubled() {
         val line1 = Line(1.0, 2.0, 3.0)
         val line2 = Line(2.0, 4.0, 6.0)
+
         val set: MutableSet<Line> = HashSet()
         set.add(line1)
         set.add(line2)
+
         assertEquals(1, set.size)
     }
 

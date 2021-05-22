@@ -1,5 +1,7 @@
-import model.Line
-import model.Point
+package com.anav.symmetry.kotlin
+
+import com.anav.symmetry.kotlin.model.Line
+import com.anav.symmetry.kotlin.model.Point
 import org.tinylog.kotlin.Logger
 
 class SymmetryEngine {

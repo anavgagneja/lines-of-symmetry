@@ -1,4 +1,4 @@
-package model
+package com.anav.symmetry.kotlin.model
 
 data class Point(val x: Double, val y: Double) {
 
